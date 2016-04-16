@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITableViewDataSource,UITableViewDelegate>
+- (IBAction)cameraBtn:(id)sender;
+@property (strong, nonatomic) IBOutlet UIImageView *takePhotoImage;
 
+@property (strong, nonatomic) IBOutlet UITableView *contentTableView;
 
 @end
 
